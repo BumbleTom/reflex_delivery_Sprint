@@ -65,23 +65,31 @@ The  architecture is a delivery coordination system designed for small Kenyan re
 
 - Retailer Dashboard → fetches updated status → shows live delivery progress
 
-+-------------+        +----------------+        +------------------+
-|  Retailer   | -----> |   Dispatcher   | -----> |      Rider       |
-|  Dashboard  |        |   Dashboard    |        |   Dashboard      |
-+-------------+        +----------------+        +------------------+
-       |                        |                        |
-       |                        |                        |
-       v                        v                        v
++------------------+         +------------------+         +------------------+
+|   Retailer       |         |   Dispatcher     |         |      Rider       |
+|   Dashboard      |         |   Dashboard      |         |   Dashboard      |
++------------------+         +------------------+         +------------------+
+        |                           |                           |
+        |                           |                           |
+        v                           v                           v
 +---------------------------------------------------------------+
-|                     Backend (Node.js/Express)                 |
-|  Routes: /retailers/request, /dispatchers/assign, /riders/update |
+|                 Backend (Node.js + Express)                   |
+|   Routes:                                                     |
+|   - /api/retailers/request   → Log new request                |
+|   - /api/dispatchers/assign  → Assign rider                   |
+|   - /api/riders/update       → Update delivery status         |
 +---------------------------------------------------------------+
-                             |
-                             v
+                                |
+                                v
 +---------------------------------------------------------------+
-|                     Database (PostgreSQL)                     |
-|  Tables: Retailers, Riders, Requests, StatusUpdates            |
+|                   Database (PostgreSQL)                       |
+|   Tables:                                                     |
+|   - Retailers                                                 |
+|   - Riders                                                    |
+|   - Requests (links Retailers + Riders)                       |
+|   - StatusUpdates (tracks delivery progress)                  |
 +---------------------------------------------------------------+
+
 
 ### Trade‑Offs
 
