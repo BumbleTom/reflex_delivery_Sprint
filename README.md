@@ -92,6 +92,8 @@ The  architecture is a delivery coordination system designed for small Kenyan re
    - Weakness: One PostgreSQL instance, no replication or sharding.
    - Accepted because: Easier setup for pilot scale.
    - Future Fix: Add replication, backups, and scaling strategy for production.
+  
+   - https://github.com/Rosalie-p/Reflex_delivery_Sprint/blob/main/Docs/Trade-off%20log.txt
 
 ### Roadmap
 
