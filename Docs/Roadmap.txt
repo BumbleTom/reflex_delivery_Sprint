@@ -1,0 +1,14 @@
+# Reflex – Roadmap
+
+Short Term (next 3 months)
+- Add authentication (JWT login, role‑based access).
+- Implement audit logging for request and status changes.
+
+Medium Term (6–12 months)
+- Automated rider assignment algorithm.
+- Analytics dashboards for retailers and dispatchers.
+
+Long Term (1–2 years)
+- Native mobile app with GPS tracking.
+- Push notifications for delivery updates.
+- Regional expansion and mobile money integration.

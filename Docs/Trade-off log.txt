@@ -1,0 +1,16 @@
+# Reflex – Trade‑Off Log
+
+1. Manual Rider Assignment
+   - Weakness: Dispatcher assigns riders manually, no auto‑routing.
+   - Accepted because: Keeps workflow simple and easy to demo in sprint.
+   - Future Fix: Implement algorithmic assignment (nearest rider, load balancing).
+
+2. No Authentication/Security Layer
+   - Weakness: No login or role‑based access control.
+   - Accepted because: Faster to implement for prototype; focus on core workflow.
+   - Future Fix: Add JWT authentication and RBAC for secure multi‑role handling.
+
+3. Single Database Instance
+   - Weakness: One PostgreSQL instance, no replication or sharding.
+   - Accepted because: Easier setup for pilot scale.
+   - Future Fix: Add replication, backups, and scaling strategy for production.
