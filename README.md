@@ -11,6 +11,14 @@ This mainly  affects the retailer staff, Dispatcher, Rider.
 The Reflex contains structured logging, rider assignment, and status updates.
 For this, we chose web prototype for speed and accessibility.
 
+Retailer logs a delivery request (customer name, phone, address, item).
+
+Dispatcher assigns the request to a rider.
+
+Rider updates status (Assigned → Picked Up → Delivered).
+
+Retailer can track progress in real time.
+
 # Reflex Architecture Design
 
 The  architecture is a delivery coordination system designed for small Kenyan retailers. It replaces ad‑hoc WhatsApp/phone coordination with a structured workflow:
