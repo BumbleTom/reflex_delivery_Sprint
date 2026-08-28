@@ -70,6 +70,14 @@ The  architecture is a delivery coordination system designed for small Kenyan re
 
 Manual rider assignment → accepted for simplicity; future automation planned.
 
-No authentication yet → accepted for demo speed; roadmap includes JWT login.
+No authentication yet → accepted for demo speed; roadmap includes JWT login plus Role-Based-Access
 
 Single database instance → accepted for pilot scale; future replication for reliability.
+
+### Roadmap
+
+- Add authentication and audit-logs
+
+- Auto-assignment and analytics dashboard
+
+- Improve to mobile app with GPS tracking and push notifications
