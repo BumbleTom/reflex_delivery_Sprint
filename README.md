@@ -76,16 +76,32 @@ The  architecture is a delivery coordination system designed for small Kenyan re
 
 ### Trade‑Offs
 
-Manual rider assignment → accepted for simplicity; future automation planned.
+1. Manual Rider Assignment
+   - Weakness: Dispatcher assigns riders manually, no auto‑routing.
+   - Accepted because: Keeps workflow simple and easy to demo in sprint.
+   - Future Fix: Implement algorithmic assignment (nearest rider, load balancing).
 
-No authentication yet → accepted for demo speed; roadmap includes JWT login plus Role-Based-Access
+2. No Authentication/Security Layer
+   - Weakness: No login or role‑based access control.
+   - Accepted because: Faster to implement for prototype; focus on core workflow.
+   - Future Fix: Add JWT authentication and RBAC for secure multi‑role handling.
 
-Single database instance → accepted for pilot scale; future replication for reliability.
+3. Single Database Instance
+   - Weakness: One PostgreSQL instance, no replication or sharding.
+   - Accepted because: Easier setup for pilot scale.
+   - Future Fix: Add replication, backups, and scaling strategy for production.
 
 ### Roadmap
 
-- Add authentication and audit-logs
+Short Term (next 3 months)
+- Add authentication (JWT login, role‑based access).
+- Implement audit logging for request and status changes.
 
-- Auto-assignment and analytics dashboard
+Medium Term (6–12 months)
+- Automated rider assignment algorithm.
+- Analytics dashboards for retailers and dispatchers.
 
-- Improve to mobile app with GPS tracking and push notifications
+Long Term (1–2 years)
+- Native mobile app with GPS tracking.
+- Push notifications for delivery updates.
+- Regional expansion and mobile money integration.
