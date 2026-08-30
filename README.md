@@ -28,8 +28,8 @@ The  architecture is a delivery coordination system designed for small Kenyan re
 - Dispatcher assigns it to a rider
 
 - Rider updates status until delivery is complete
-
-  https://github.com/Rosalie-p/Reflex_delivery_Sprint/blob/main/Docs/Architecture_Diagram.pdf
+  
+- https://github.com/Rosalie-p/Reflex_delivery_Sprint/blob/main/Docs/Architecture_Diagram.pdf
 
 ## Architectural Layers
 
@@ -40,6 +40,12 @@ The  architecture is a delivery coordination system designed for small Kenyan re
 - Simple forms + fetch API calls to backend routes
 
 - Provides real‑time visibility of delivery status
+
+- https://github.com/Rosalie-p/Reflex_delivery_Sprint/blob/main/Frontend/Frontend/Retailer%20Dashboard.txt
+
+- https://github.com/Rosalie-p/Reflex_delivery_Sprint/blob/main/Frontend/Frontend/Dispatcher.txt
+
+- https://github.com/Rosalie-p/Reflex_delivery_Sprint/blob/main/Frontend/Frontend/Rider%20Dashboard.txt
 
 ### Backend (Application Layer)
 
@@ -52,8 +58,10 @@ The  architecture is a delivery coordination system designed for small Kenyan re
    - /api/dispatchers/assign → assign rider
 
    - /api/riders/update → update status
+ 
+  - Business logic for request handling and validation
 
-- Business logic for request handling and validation
+- https://github.com/Rosalie-p/Reflex_delivery_Sprint/blob/main/Backend/Backend.txt
 
 ### Database (Data Layer)
 
@@ -64,6 +72,8 @@ The  architecture is a delivery coordination system designed for small Kenyan re
 - Foreign keys enforce relationships
 
 - StatusUpdates table tracks delivery progress over time
+ 
+- https://github.com/Rosalie-p/Reflex_delivery_Sprint/blob/main/Database/Database.txt
 
 ### Workflow Diagram
 
@@ -75,6 +85,7 @@ The  architecture is a delivery coordination system designed for small Kenyan re
 
 - Retailer Dashboard → fetches updated status → shows live delivery progress
 
+- https://github.com/Rosalie-p/Reflex_delivery_Sprint/blob/main/Docs/ER%20Diagram.pdf
 
 ### Trade‑Offs
 
