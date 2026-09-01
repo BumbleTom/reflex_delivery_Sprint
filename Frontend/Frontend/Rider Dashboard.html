@@ -2,31 +2,35 @@
 <html>
 <head>
   <title>Rider Dashboard</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
 </head>
-<body class="container mt-5">
-  <h2>My Assigned Deliveries</h2>
-  <div id="deliveries"></div>
-  <button id="pickupBtn" class="btn btn-success mt-3">Mark as Picked Up</button>
+<body>
+  <h1>Rider Dashboard</h1>
+  <form id="updateForm">
+    <input type="number" id="rider_id" placeholder="Rider ID" required>
+    <select id="status" required>
+      <option value="Picked Up">Picked Up</option>
+      <option value="Delivered">Delivered</option>
+    </select>
+    <button type="submit">Update Status</button>
+  </form>
+
+  <a href="index.html">Back to Retailer Dashboard</a><br>
+  <a href="dispatcher-dashboard.html">Go to Dispatcher Dashboard</a>
 
   <script>
-    async function loadDeliveries() {
-      const res = await fetch('/api/riders/assigned?rider_id=1');
-      const data = await res.json();
-      document.getElementById('deliveries').innerText = JSON.stringify(data, null, 2);
-    }
-
-    document.getElementById('pickupBtn').addEventListener('click', async () => {
-      const res = await fetch('/api/riders/update', {
+    document.getElementById('updateForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const response = await fetch('https://reflex-backend.onrender.com/api/riders/update', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ rider_id: 1, status: 'Picked Up' })
+        body: JSON.stringify({
+          rider_id: document.getElementById('rider_id').value,
+          status: document.getElementById('status').value
+        })
       });
-      const data = await res.json();
-      alert("Status updated: " + data.status);
+      const data = await response.json();
+      alert('Status updated: ' + JSON.stringify(data));
     });
-
-    loadDeliveries();
   </script>
 </body>
 </html>
